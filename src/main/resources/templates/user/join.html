@@ -16,7 +16,7 @@
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <strong><a class="navbar-brand" href="/">스프링</a></strong>
+    <strong><a class="navbar-brand" href="/">우리 아이를 부탁해</a></strong>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
@@ -24,9 +24,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">게시판</a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/cctvstream">실시간 CCT</a></li>
+            <li><a class="dropdown-item" href="/recording">녹화 영상</a></li>
             <li><a class="dropdown-item" href="/list">자유게시판</a></li>
-            <li><a class="dropdown-item" href="#">질문게시판</a></li>
-            <li><a class="dropdown-item" href="#">스터디게시판</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link active" aria-current="page" sec:authorize="isAnonymous()" th:href="@{/login}">로그인</a></li>
