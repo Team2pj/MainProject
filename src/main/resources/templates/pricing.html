@@ -1,15 +1,13 @@
 <!doctype html>
-<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
   <head>
     <title>Kiddy &mdash; Website Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
 
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
-
+    
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -46,17 +44,17 @@
 
         <div class="container mb-3">
           <div class="d-flex align-items-center">
-            <div class="site-logo mr-auto" style="font-size:2.5em;">
-              <a href="/">우리 아이를 부탁해</a>
+            <div class="site-logo mr-auto">
+              <a href="/">Kiddy<span class="text-primary">.</span></a>
             </div>
             <div class="site-quick-contact d-none d-lg-flex ml-auto ">
               <div class="d-flex site-info align-items-center mr-5">
                 <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
-                <span>경동로 1375, 안동시, 경상북도 <br> 안동대학교</span>
+                <span>34 Street Name, City Name Here, <br> United States</span>
               </div>
               <div class="d-flex site-info align-items-center">
                 <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
-                <span>월요일 - 금요일 8:00AM - 5:00PM <br> 저녁 돌봄 시간 5:00PM - 9:00PM </span>
+                <span>Sunday - Friday 8:00AM - 4:00PM <br> Saturday CLOSED</span>
               </div>
               
             </div>
@@ -68,23 +66,23 @@
           <div class="menu-wrap d-flex align-items-center">
             <span class="d-inline-block d-lg-none"><a href="#" class="text-black site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-black"></span></a></span>
 
-
+              
 
               <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav mr-auto ">
-                  <li class="active"><a href="#" class="nav-link">Home</a></li>
+                  <li><a href="/index" class="nav-link">Home</a></li>
                   <li><a href="/about" class="nav-link">About</a></li>
-                  <li><a href="/packages" class="nav-link">Service</a></li>
-                  <li><a href="/gallery" class="nav-link">CCTV</a></li>
-                  <li><a href="/pricing" class="nav-link">폭력행위 감지</a></li>
-                  <li><a href="/contact" class="nav-link">소통해요</a></li>
+                  <li><a href="/packages" class="nav-link">Packages</a></li>
+                  <li><a href="/gallery" class="nav-link">Gallery</a></li>
+                  <li class="active"><a href="/pricing" class="nav-link">Pricing</a></li>
+                  <li><a href="/contact" class="nav-link">Contact</a></li>
                 </ul>
               </nav>
 
               <div class="top-social ml-auto">
-                <a aria-current="page" th:href="@{/login}" sec:authorize="isAnonymous()" ><span class=" text-yellow">LogIN</span></a>
-                <<a aria-current="page" th:href="@{/user/logout}" sec:authorize="isAuthenticated()"><span class=" text-yellow">LogOut</span></a>
-                <a aria-current="page" th:href="@{/join}" sec:authorize="isAnonymous()"><span class=" text-yellow">SingUP</span></a>
+                <a href="#"><span class="icon-facebook text-teal"></span></a>
+                <a href="#"><span class="icon-twitter text-success"></span></a>
+                <a href="#"><span class="icon-linkedin text-yellow"></span></a>
               </div>
           </div>
         </div>
@@ -94,116 +92,21 @@
       </header>
 
     <div class="ftco-blocks-cover-1">
-       
-      <div class="site-section-cover overlay">
+      <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
         <div class="container">
           <div class="row align-items-center ">
+
             <div class="col-md-5 mt-5 pt-5">
-              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
-              <h1 class="mb-3 font-weight-bold text-teal">Give safety to the children</h1>
-              <p>우리 아이를 부탁해 , 유치원내 아동폭력 방지 CCTV</p>
-              <p class="mt-5"><a href="#" class="btn btn-primary py-4 btn-custom-1">Learn More</a></p>
+              <span class="text-cursive h5 text-red">Pricing</span>
+              <h1 class="mb-3 font-weight-bold text-teal">Our Pricing</h1>
+              <p><a href="/" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Pricing</strong></p>
             </div>
-            <div class="col-md-6 ml-auto align-self-end">
-              <img src="images/kid_transparent.png" alt="Image" class="img-fluid">
-
-            </div>
+            
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="block-2 red">
-              <span class="wrap-icon">
-                <span class="icon-home"></span>
-              </span>
-              <h2>실시간 CCTV</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="block-2 yellow">
-              <span class="wrap-icon">
-                <span class="icon-person"></span>
-              </span>
-              <h2>폭력행위 감지</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="block-2 teal">
-              <span class="wrap-icon">
-                <span class="icon-cog"></span>
-              </span>
-              <h2>우리 소통해요</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nesciunt, mollitia, hic enim id culpa.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-5 ml-auto pl-md-5">
-            <span class="text-cursive h5 text-red">About Us</span>
-            <h3 class="text-black">Give safety to the children</h3>
-            <br>
-            <p><span>아이들에게 안전함을 선사하세요.</span></p>
-            <p><span>"우리 아이를 부탁해"는 아이의 안전을 최우선으로 생각한 솔루션입니다.</span></p>
-            <p><span>"우리 아이를 부탁해"는 폭력으로부터의 보호와 학대로부터의 예방을 제공합니다. </span></p>
-
-            <p class="mt-5"><a href="/about" class="btn btn-warning py-4 btn-custom-1">More About Us</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    <div class="site-section bg-info">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <span class="text-cursive h5 text-red d-block">Service You Like</span>
-            <h2 class="text-white">Our Service</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/001-jigsaw.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-teal">실시간 CCTV</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-primary btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/002-target.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-success">폭력행위 감지</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-warning btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/003-mission.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-danger">우리 소통해요</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-success btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="site-section">
       <div class="container">
@@ -244,7 +147,7 @@
         </div>
       </div>
     </div>
-    <!--
+
     <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5">
@@ -324,39 +227,23 @@
         </div>
       </div>
     </div>
--->
 
-    <div class="site-section py-5 bg-warning">
+    
+
+    <footer class="site-footer">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 d-flex">
-          <h2 class="text-white m-0">Give safety to the children</h2>
-          <a href="#" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="footer-heading mb-3">About Us</h2>
+                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 
-
-
-          <footer class="site-footer">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <h2 class="footer-heading mb-3">About Us</h2>
-                  <br>
-                  <p><span>아이들에게 안전함을 선사하세요.</span></p>
-                  <p><span>"우리 아이를 부탁해"는 아이의 안전을 최우선으로 생각한 솔루션입니다.</span></p>
-                  <p><span>"우리 아이를 부탁해"는 폭력으로부터의 보호와 학대로부터의 예방을 제공합니다. </span></p>
-
-                  <!--
-                                  <h2 class="footer-heading mb-4">Newsletter</h2>
-
-                                  <form action="#" class="d-flex" class="subscribe">
-                                    <input type="text" class="form-control mr-3" placeholder="Email">
-                                    <input type="submit" value="Send" class="btn btn-primary">
-                                  </form>
-                                  -->
+                <h2 class="footer-heading mb-4">Newsletter</h2>
+            <!--
+                <form action="#" class="d-flex" class="subscribe">
+                  <input type="text" class="form-control mr-3" placeholder="Email">
+                  <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+                -->
           </div>
           <div class="col-lg-8 ml-auto">
             <div class="row">
