@@ -15,11 +15,13 @@ public class EtcController {
     public String about_page(){
         return "about";
     }
-
+/*
     @GetMapping("/contact")
     public String contact_page(){
         return "contact";
     }
+
+ */
 
     @GetMapping("/gallery")
     public String gallery_page(){

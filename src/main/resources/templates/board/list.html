@@ -1,95 +1,263 @@
-<!DOCTYPE html>
-<html xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link rel='stylesheet' href='css/index.css'>
+  <title>우리 아이를 부탁해</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
-<!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <strong><a class="navbar-brand" href="/">우리 아이를 부탁해</a></strong>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">홈</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">게시판</a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/cctvstream">실시간 CCT</a></li>
-            <li><a class="dropdown-item" href="/recording">녹화 영상</a></li>
-            <li><a class="dropdown-item" href="/list">자유게시판</a></li>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+<div class="site-wrap" id="home-section">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+
+  <header class="site-navbar site-navbar-target" role="banner">
+
+    <div class="container mb-3">
+      <div class="d-flex align-items-center">
+        <div class="site-logo mr-auto" style="font-size:2.0em;">
+          <a href="/">우리 아이를 부탁해</a>
+        </div>
+        <div class="site-quick-contact d-none d-lg-flex ml-auto ">
+          <div class="d-flex site-info align-items-center mr-5">
+            <span class="block-icon mr-3"><span class="icon-map-marker text-yellow"></span></span>
+            <span>경동로 1375, 안동시, 경상북도 <br> 안동대학교</span>
+          </div>
+          <div class="d-flex site-info align-items-center">
+            <span class="block-icon mr-3"><span class="icon-clock-o"></span></span>
+            <span>월요일 - 금요일 9:00AM - 6:00PM <br> 토요일, 일요일 휴무 </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="menu-wrap d-flex align-items-center">
+                <span class="d-inline-block d-lg-none"><a href="#"
+                                                          class="text-black site-menu-toggle js-menu-toggle py-5"><span
+                        class="icon-menu h3 text-black"></span></a></span>
+
+
+        <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto ">
+            <li class="active"><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/about" class="nav-link">About</a></li>
+            <li><a href="/packages" class="nav-link">Service</a></li>
+            <li><a href="/gallery" class="nav-link">CCTV</a></li>
+            <li><a href="/pricing" class="nav-link">Violent Message</a></li>
+            <li><a href="http://192.168.1.1:8080" class="nav-link" target="_blank">Shinobi</a></li>
+            <li><a href="/contact" class="nav-link">communicate</a></li>
+
           </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" sec:authorize="isAnonymous()" th:href="@{/login}">로그인</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" sec:authorize="isAnonymous()" th:href="@{/join}">회원가입</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" sec:authorize="hasRole('ROLE_MEMBER')" th:href="@{/user/info}">내정보</a></li>
-      </ul>
+        </nav>
+
+        <div class="top-social ml-auto">
+          <a aria-current="page" th:href="@{/login}" sec:authorize="isAnonymous()"><span class=" text-yellow">log in</span></a>
+          <<a aria-current="page" th:href="@{/user/logout}" sec:authorize="isAuthenticated()"><span
+                class=" text-yellow">log out</span></a>
+          <a aria-current="page" th:href="@{/join}" sec:authorize="isAnonymous()"><span class=" text-red">sign up</span></a>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-<div class="container" >
-  <strong><h3 style="margin-top: 20px; margin-bottom: 20px">게시판</h3></strong>
-  <table class="table">
-    <thead class="thead-light">
-    <tr class="text-center">
-      <th scope="col">번호</th>
-      <th scope="col">제목</th>
-      <th scope="col">작성자</th>
-      <th scope="col">조회수</th>
-      <th scope="col">작성일</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="text-center" th:each="post : ${postList}" >
-      <th scope="row">
-        <span th:text="${post.id}"></span>
-      </th>
-      <td>
-        <a th:href="@{'/post/' + ${post.id}}">
-          <span th:text="${post.title}"></span>
-        </a>
-      </td>
-      <td>
-        <span sec:authorize="isAuthenticated()" sec:authentication property="pricipal.userName" var="userName"></span>
-        <span id="userName" th:text="${username}"></span>
-      </td>
-      <td>
-        <span th:text="${post.viewCnt}"></span>
-      </td>
-      <td>
-        <span th:text="${#temporals.format(post.insertTime, 'yyyy-MM-dd HH:mm')}"></span>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-auto mr-auto"></div>
-    <div class="col-auto">
-      <a class="btn btn-primary" th:href="@{/post}" role="button">글쓰기</a>
+
+
+  </header>
+
+  <div class="ftco-blocks-cover-1">
+    <div class="site-section-cover overlay" data-stellar-background-ratio="0.5"
+         style="background-image: url('images/hero_1.jpg')">
+      <div class="container">
+        <div class="row align-items-center ">
+
+          <div class="col-md-5 mt-5 pt-5">
+            <span class="text-cursive h5 text-red">Contact</span>
+            <h1 class="mb-3 font-weight-bold text-teal">Get In Touch</h1>
+            <p><a href="/" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Contact</strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
-  <form action="/search" method="get">
-    <div class="search">
-      <input name="keyword" type="text" placeholder="검색어를 입력해주세요">
-    </div>
-    <button>검색하기</button>
-  </form>
 
-  <div style="padding-top: 25px; text-align: center">
+  <div class="site-section bg-light" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center ">
+        <div class="container">
+          <strong><h3 style="margin-top: 20px; margin-bottom: 20px">게시판</h3></strong>
+          <table class="table">
+            <thead class="thead-light">
+            <tr class="text-center">
+              <th scope="col">번호</th>
+              <th scope="col">제목</th>
+              <th scope="col">작성자</th>
+              <th scope="col">조회수</th>
+              <th scope="col">작성일</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center" th:each="post : ${postList}">
+              <th scope="row">
+                <span th:text="${post.id}"></span>
+              </th>
+              <td>
+                <a th:href="@{'/post/' + ${post.id}}">
+                  <span th:text="${post.title}"></span>
+                </a>
+              </td>
+              <td>
+                                <span sec:authorize="isAuthenticated()" sec:authentication property="pricipal.userName"
+                                      var="userName"></span>
+                <span id="userName" th:text="${username}"></span>
+              </td>
+              <td>
+                <span th:text="${post.viewCnt}"></span>
+              </td>
+              <td>
+                <span th:text="${#temporals.format(post.insertTime, 'yyyy-MM-dd HH:mm')}"></span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-auto mr-auto"></div>
+            <div class="col-auto">
+              <a class="btn btn-primary" th:href="@{/post}" role="button">글쓰기</a>
+            </div>
+          </div>
+
+          <form action="/search" method="get">
+            <div class="search">
+              <input name="keyword" type="text" placeholder="검색어를 입력해주세요">
+            </div>
+            <button>검색하기</button>
+          </form>
+
+          <div style="padding-top: 25px; text-align: center">
     <span th:each="pageNum : ${pageList}" th:inline="text">
       <a th:href="@{'/?page=' + ${pageNum}}">[[${pageNum}]]</a>
     </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 class="footer-heading mb-3">About Us</h2>
+          <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and
+            Consonantia, there live the blind texts. </p>
+
+          <h2 class="footer-heading mb-4">Newsletter</h2>
+          <!--
+              <form action="#" class="d-flex" class="subscribe">
+                <input type="text" class="form-control mr-3" placeholder="Email">
+                <input type="submit" value="Send" class="btn btn-primary">
+              </form>
+              -->
+        </div>
+        <div class="col-lg-8 ml-auto">
+          <div class="row">
+            <div class="col-lg-4 ml-auto">
+              <h2 class="footer-heading mb-4">Navigation</h2>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4">
+              <h2 class="footer-heading mb-4">Navigation</h2>
+              <ul class="list-unstyled">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5 mt-5 text-center">
+        <div class="col-md-12">
+          <div class="border-top pt-5">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+              All rights reserved | This template is made with <i class="icon-heart text-danger"
+                                                                  aria-hidden="true"></i> by <a
+                    href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
 </div>
 
-<!--JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/aos.js"></script>
+
+<script src="js/main.js"></script>
 
 </body>
+
 </html>
+

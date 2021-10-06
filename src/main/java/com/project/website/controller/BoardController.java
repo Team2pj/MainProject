@@ -26,12 +26,9 @@ public class BoardController {
 
 
 
-    @GetMapping("/")
-    public String home() {
-        return "index";
-    }
 
-    @GetMapping("/list")
+
+    @GetMapping("/contact")
     public String list(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, Principal principal) {
         List<BoardDto> boardDtoList = boardService.getBoardList(pageNum);
         Integer[] pageList = boardService.getPageList(pageNum);
