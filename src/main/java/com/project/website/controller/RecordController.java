@@ -18,16 +18,12 @@ public class RecordController {
         this.recordService = recordService;
     }
 
-    @GetMapping("/record")
-    public String reco() {
-        return "video/recording";
-    }
 
-    @GetMapping("test")
+    @GetMapping("Violent_Message")
     public String list(Model model){
         List<RecordDto> recordDtoList = recordService.getRecordList();
         model.addAttribute("recordList", recordDtoList);
-        return "/test";
+        return "/violoentmessage";
     }
 
 
