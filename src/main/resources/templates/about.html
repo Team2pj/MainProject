@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>우리 아이를 부탁해</title>
     <meta charset="utf-8">
@@ -75,7 +78,7 @@
                         <li><a href="/CCTV" class="nav-link">CCTV</a></li>
                         <li><a href="/Violent_Message" class="nav-link">Violent Message</a></li>
                         <li><a href="http://192.168.1.1:8080" class="nav-link" target="_blank">Shinobi</a></li>
-                        <li><a href="/contact" class="nav-link">Communicate</a></li>
+                        <li><a href="/communicate" class="nav-link">Communicate</a></li>
 
                     </ul>
                 </nav>
@@ -83,8 +86,8 @@
                 <div class="top-social ml-auto">
                     <a aria-current="page" th:href="@{/join}" sec:authorize="isAnonymous()"><span class=" text-red">sign up</span></a>
                     <a aria-current="page" th:href="@{/login}" sec:authorize="isAnonymous()"><span class=" text-yellow">log in</span></a>
-                    <<a aria-current="page" th:href="@{/user/logout}" sec:authorize="isAuthenticated()"><span
-                        class=" text-yellow">log out</span></a>
+                    <a aria-current="page" th:href="@{/user/logout}" sec:authorize="isAuthenticated()"><span
+                            class=" text-yellow">log out</span></a>
 
                 </div>
             </div>
@@ -103,7 +106,7 @@
                     <div class="col-md-5 mt-5 pt-5">
                         <span class="text-cursive h5 text-red">Welcome To Our Website</span>
                         <h1 class="mb-3 font-weight-bold text-teal">About Us</h1>
-                        <p><a href="/" class="text-white">Home</a> <span class="mx-3">/</span> <strong>About</strong>
+                        <p><a href="/" class="text-white">Home</a> <span class="mx-3">/</span> <strong>About Us</strong>
                         </p>
                     </div>
 
@@ -139,8 +142,7 @@
                 <div class="col-md-6">
                     <span class="text-cursive h5 text-red">The Team</span>
                     <h3 class="text-white text-center">Meet The Team</h3>
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel
-                        earum maxime neque!</p>
+                    <p class="mb-5"></p>
                 </div>
             </div>
             <div class="row align-items-stretch">
@@ -163,13 +165,14 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="post-entry-1 h-100 person-1 yellow">
 
-                        <img src="images/person_2.jpg" alt="Image"
+                        <img src="images/송멘토님.png" alt="Image"
                              class="img-fluid">
 
                         <div class="post-entry-1-contents">
                             <span class="meta">멘토</span>
                             <h2>송정욱</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                            <p>(주)스피크엔어소시에이츠</p>
+                            <p>프로젝트 관리</p>
                         </div>
                     </div>
                 </div>
@@ -192,13 +195,14 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="post-entry-1 h-100 person-1 green">
 
-                        <img src="images/person_4.jpg" alt="Image"
+                        <img src="images/상준소개.jpg" alt="Image"
                              class="img-fluid">
 
                         <div class="post-entry-1-contents">
                             <span class="meta">팀장</span>
                             <h2>김상준</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                            <p>정보통신공학과</p>
+                            <p>프로젝트 총괄 및 웹 구현</p>
                         </div>
                     </div>
                 </div>
@@ -206,13 +210,15 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="post-entry-1 h-100 person-1 blue">
 
-                        <img src="images/person_5.jpg" alt="Image"
+                        <img src="images/치형소개.jpg" alt="Image"
                              class="img-fluid">
 
                         <div class="post-entry-1-contents">
                             <span class="meta">팀원</span>
                             <h2>이치형</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                            <p>정보통신공학과</p>
+                            <p>웹 개발 및 모델링</p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -220,13 +226,14 @@
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="post-entry-1 h-100 person-1 red">
 
-                        <img src="images/person_1.jpg" alt="Image"
+                        <img src="images/현국소개.jpg" alt="Image"
                              class="img-fluid">
 
                         <div class="post-entry-1-contents">
                             <span class="meta">팀원</span>
                             <h2>유현국</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                            <p>정보통계학과</p>
+                            <p>모델링 및 행동 추론 </p>
                         </div>
                     </div>
                 </div>
@@ -252,7 +259,7 @@
                                                     class="img-fluid"></span>
                         <h3 class="text-teal">실시간 CCTV</h3>
                         <p></p>
-                        <p><a href="/gallery" class="btn btn-primary btn-custom-1 mt-4">Learn More</a></p>
+                        <p><a href="/CCTV" class="btn btn-primary btn-custom-1 mt-4">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -261,7 +268,7 @@
                                                     class="img-fluid"></span>
                         <h3 class="text-success">폭력행위 감지</h3>
                         <p></p>
-                        <p><a href="/pricing" class="btn btn-warning btn-custom-1 mt-4">Learn More</a></p>
+                        <p><a href="/Violent_Message" class="btn btn-warning btn-custom-1 mt-4">Learn More</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">

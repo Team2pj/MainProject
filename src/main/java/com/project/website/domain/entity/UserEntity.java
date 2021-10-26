@@ -28,15 +28,19 @@ public class UserEntity extends TimeEntity{
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private String phoneNumber;
+
     @OneToMany(mappedBy="userEntity")
     private List<BoardEntity> boards = new ArrayList<>();
 
     @Builder
-    public UserEntity(Long id, String email, String userName, String password) {
+    public UserEntity(Long id, String email, String userName, String password, String phoneNumber) {
         this.id = id;
         this.email = email;
         this.userName = userName;
         this.password = password;
+        this.phoneNumber = phoneNumber;
 
     }
 

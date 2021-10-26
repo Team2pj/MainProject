@@ -10,26 +10,23 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class RecordDto {
-    private Long videoId;
-    private String videoName;
-    private String videoPath;
-    private String videoType;
+    private Long inferenceId;
+    private String inferenceTime;
+    private String inferenceType;
 
     public RecordEntity toEntity(){
         return RecordEntity.builder()
-                .videoId(videoId)
-                .videoName(videoName)
-                .videoPath(videoPath)
-                .videoType(videoType)
+                .inferenceId(inferenceId)
+                .inferenceTime(inferenceTime)
+                .inferenceType(inferenceType)
                 .build();
     }
 
     @Builder
-    public RecordDto(Long videoId, String videoName, String videoPath, String videoType) {
-        this.videoId=videoId;
-        this.videoName=videoName;
-        this.videoPath=videoPath;
-        this.videoType=videoType;
-    }
+    public RecordDto(Long inferenceId, String inferenceTime, String inferenceType) {
+        this.inferenceId=inferenceId;
+        this.inferenceTime=inferenceTime;
+        this.inferenceType=inferenceType;
+            }
 
 }

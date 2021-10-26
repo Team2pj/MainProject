@@ -17,6 +17,7 @@ public class UserDto {
     private String email;
     private String userName;
     private String password;
+    private String phoneNumber;
     private LocalDateTime insertTime;
 
     public UserEntity toEntity(){
@@ -25,14 +26,16 @@ public class UserDto {
                 .email(email)
                 .userName(userName)
                 .password(password)
+                .phoneNumber(phoneNumber)
                 .build();
     }
 
     @Builder
-    public UserDto(Long id, String email, String userName, String password) {
+    public UserDto(Long id, String email, String userName, String password, String phoneNumber) {
         this.id = id;
         this.email = email;
         this.userName = userName;
         this.password = password;
+        this.phoneNumber = phoneNumber;
     }
 }

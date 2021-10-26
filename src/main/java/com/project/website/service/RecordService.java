@@ -1,12 +1,8 @@
 package com.project.website.service;
 
-
-import com.project.website.domain.entity.BoardEntity;
 import com.project.website.domain.entity.RecordEntity;
 import com.project.website.domain.repository.RecordRepository;
-import com.project.website.dto.BoardDto;
 import com.project.website.dto.RecordDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -25,7 +21,7 @@ public class RecordService {
 
     @Transactional
     public Long saveRecord(RecordDto recordDto) {
-        return recordRepository.save(recordDto.toEntity()).getVideoId();
+        return recordRepository.save(recordDto.toEntity()).getInferenceId();
     }
 
     @Transactional
@@ -35,10 +31,9 @@ public class RecordService {
 
         for(RecordEntity record : recordEntityList){
             RecordDto recordDto = RecordDto.builder()
-                    .videoId(record.getVideoId())
-                    .videoType(record.getVideoType())
-                    .videoPath(record.getVideoPath())
-                    .videoName(record.getVideoName())
+                    .inferenceId(record.getInferenceId())
+                    .inferenceType(record.getInferenceType())
+                    .inferenceTime(record.getInferenceTime())
                     .build();
             recordDtoList.add(recordDto);
         }

@@ -28,7 +28,7 @@ public class BoardController {
 
 
 
-    @GetMapping("/contact")
+    @GetMapping("/communicate")
     public String list(Model model, @RequestParam(value = "page", defaultValue = "1") Integer pageNum, Principal principal) {
         List<BoardDto> boardDtoList = boardService.getBoardList(pageNum);
         Integer[] pageList = boardService.getPageList(pageNum);
@@ -48,7 +48,7 @@ public class BoardController {
     @PostMapping("/post")
     public String write(BoardDto boardDto) {
         boardService.savePost(boardDto);
-        return "redirect:/list";
+        return "redirect:/communicate";
     }
 
 
@@ -70,13 +70,13 @@ public class BoardController {
     @PutMapping("/post/update/{id}")
     public String update(BoardDto boardDto){
         boardService.savePost(boardDto);
-        return "redirect:/list";
+        return "redirect:/";
     }
 
     @DeleteMapping("/post/delete/{id}")
     public String delete(@PathVariable("id") Long id){
         boardService.deletePost(id);
-        return "redirect:/list";
+        return "redirect:/";
     }
     
 

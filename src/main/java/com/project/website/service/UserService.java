@@ -6,8 +6,7 @@ import com.project.website.domain.repository.UserRepository;
 import com.project.website.domain.entity.UserEntity;
 import com.project.website.dto.UserDto;
 import lombok.AllArgsConstructor;
-import org.springframework.aop.ClassFilter;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -16,7 +15,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -43,7 +41,7 @@ public class UserService implements UserDetailsService {
 
         List<GrantedAuthority> auth = new ArrayList<>();
 
-        if(("admin@example.com").equals(email)) {
+        if (("admin@example.com").equals(email)) {
             auth.add(new SimpleGrantedAuthority(Role.ADMIN.getValue()));
         } else {
             auth.add(new SimpleGrantedAuthority(Role.USER.getValue()));

@@ -13,24 +13,20 @@ public class RecordEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long videoId;
+    private Long inferenceId;
 
-    @Column(nullable = false)
-    private String videoName;
+    @Column(length=100, nullable = false )
+    private String inferenceTime;
 
-    @Column(nullable = false)
-    private String videoPath;
-
-    @Column(nullable = false)
-    private String videoType;
+    @Column(length=100, nullable = false)
+    private String inferenceType;
 
 
     @Builder
-    public RecordEntity( Long videoId, String videoName, String videoPath, String videoType) {
-        this.videoId=videoId;
-        this.videoName=videoName;
-        this.videoPath=videoPath;
-        this.videoType=videoType;
+    public RecordEntity( Long inferenceId, String inferenceTime, String inferenceType) {
+        this.inferenceId=inferenceId;
+        this.inferenceTime=inferenceTime;
+        this.inferenceType=inferenceType;
     }
 
 }

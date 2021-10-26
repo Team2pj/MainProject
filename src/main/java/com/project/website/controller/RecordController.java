@@ -23,10 +23,8 @@ public class RecordController {
     public String list(Model model){
         List<RecordDto> recordDtoList = recordService.getRecordList();
         model.addAttribute("recordList", recordDtoList);
-        return "/violoentmessage";
+        return "record";
     }
 
 
 }
-
-
